@@ -1,0 +1,31 @@
+.app-content {
+    min-height: 90vh;
+    padding: 1rem;
+    background-color: inherit;
+}
+
+.icon-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.icon-wrapper svg {
+    cursor: pointer;
+    color: green;
+}
+
+.all-activities-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: .5rem;
+}
+
+.current-activity {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 1rem;
+}

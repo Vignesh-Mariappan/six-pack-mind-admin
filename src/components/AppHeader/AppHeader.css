@@ -1,0 +1,19 @@
+.six-pack-mind-header  {
+    display: flex;
+    align-items: center;
+    height: 10vh;
+    color: white;
+    background-color: #cdcdcd36;
+    justify-content: space-between;
+}
+
+.six-pack-mind-admin {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: -5px;
+}
+
+.six-pack-mind-admin h5 {
+    margin-bottom: 0px !important;
+}
