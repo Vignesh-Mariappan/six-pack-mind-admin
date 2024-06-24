@@ -33,7 +33,7 @@ const LoginPage = () => {
   return (
     <div className='login-page'>
         <div className="login-page-wrapper">
-            <Title level={2}>Six Pack Mind</Title>
+            <Title level={2}>Six Pack Mind Admin</Title>
             <Button type="primary" onClick={signInWithGoogle}>Sign In Google</Button>
         </div>
     </div>

@@ -38,3 +38,9 @@ body {
 .ant-form-item-label {
   text-align: start !important;
 }
+
+@media screen and (max-width: 500px) {
+  .login-page-wrapper {
+    border: none;
+  }
+}
