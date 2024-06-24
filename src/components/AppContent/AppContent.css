@@ -1,7 +1,8 @@
 .app-content {
     min-height: 90vh;
     padding: 1rem;
-    /* background-color: whitesmoke; */
+    margin: 0 auto;
+    max-width: 1440px;
 }
 
 .icon-wrapper {
