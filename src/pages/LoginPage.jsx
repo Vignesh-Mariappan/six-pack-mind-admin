@@ -6,6 +6,7 @@ import { memo } from 'react';
 import { Navigate } from 'react-router-dom';
 import { useAuth } from '../App';
 import { auth, googleProvider } from '../firebase/config';
+import { GoogleOutlined } from '@ant-design/icons';
 
 const { Title } = Typography;
 
@@ -34,7 +35,7 @@ const LoginPage = () => {
     <div className='login-page'>
         <div className="login-page-wrapper">
             <Title level={2}>Six Pack Mind Admin</Title>
-            <Button type="primary" onClick={signInWithGoogle}>Sign In with Google</Button>
+            <Button type="primary" icon={<GoogleOutlined />} onClick={signInWithGoogle}>Sign In with Google</Button>
         </div>
     </div>
   )
