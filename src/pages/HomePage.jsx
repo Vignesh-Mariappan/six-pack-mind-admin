@@ -10,6 +10,7 @@ const HomePage = () => {
   const layoutStyle = {
     overflow: 'auto',
     width: '1440px',
+    margin: '0 auto'
   };
   
   if (!authentication?.user) {
