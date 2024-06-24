@@ -1,10 +1,29 @@
-// import AppContent from "../components/AppContent/AppContent";
+import { Navigate } from "react-router-dom";
+import { useAuth } from "../App";
+import AppContent from "../components/AppContent/AppContent";
+import AppHeader from "../components/AppHeader/AppHeader";
+import { Layout } from "antd";
 
-// const HomePage = () => {
+const HomePage = () => {
+  const authentication = useAuth();
 
-//   return (
-//     <AppContent />
-//   )
-// }
+  const layoutStyle = {
+    overflow: 'hidden',
+    width: '100%',
+    maxWidth: '1440px',
+    margin: '0 auto',
+  };
+  
+  if (!authentication?.user) {
+    return <Navigate to="/login/" />;
+  }
 
-// export default HomePage;
+  return (
+    <Layout style={layoutStyle}>
+      <AppHeader />
+      <AppContent />
+    </Layout>
+  )
+}
+
+export default HomePage;

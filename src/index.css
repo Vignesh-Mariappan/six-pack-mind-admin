@@ -7,7 +7,7 @@
 body {
   width: 100vw;
   height: 100vh;
-  background-color: whitesmoke;
+  background-color: white;
 }
 
 .login-page {
@@ -24,6 +24,10 @@ body {
   padding: 2rem;
   border: 2px solid #18181820;
   border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .login-page-wrapper h2 {

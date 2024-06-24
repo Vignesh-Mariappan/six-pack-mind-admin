@@ -10,10 +10,16 @@
 .six-pack-mind-admin {
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 1rem;
     margin-top: -5px;
 }
 
 .six-pack-mind-admin h5 {
     margin-bottom: 0px !important;
+}
+
+@media screen and (max-width: 450px) {
+    .six-pack-mind-admin .ant-avatar, .six-pack-mind-admin h5 {
+        display: none;
+    }
 }

@@ -104,8 +104,6 @@ const WeeklyUserActivities = ({ usersData = []}) => {
         return currentUser;
       });
 
-      console.log('usersDataSource', usersDataSource);
-
     // table columns
     const weeklyUserActivitiesTableCols = [
     {
@@ -338,8 +336,6 @@ const WeeklyUserActivities = ({ usersData = []}) => {
         }
     });
 
-    console.log('userActivitiesCountData ', userActivitiesCountData)
-
     const userActivitiesCountTableCols = [
         {
             title: 'Name',
@@ -404,8 +400,6 @@ const WeeklyUserActivities = ({ usersData = []}) => {
 
             return cloneUser;
         });
-
-        console.log('cloneDataSource', cloneDataSource)
 
         const worksheet = XLSX.utils.json_to_sheet(cloneDataSource);
         const workbook = XLSX.utils.book_new();
