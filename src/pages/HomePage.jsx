@@ -8,8 +8,8 @@ const HomePage = () => {
   const authentication = useAuth();
 
   const layoutStyle = {
-    overflow: 'hidden',
-    width: '100%',
+    overflow: 'auto',
+    width: '1440px',
   };
   
   if (!authentication?.user) {
