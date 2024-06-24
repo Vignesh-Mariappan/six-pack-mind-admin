@@ -34,15 +34,6 @@ export const useAuth = () => {
 
 function App() {
 
-  // return (
-  //   <>
-  //     <Layout style={layoutStyle}>
-  //       <AppHeader />
-  //       <AppContent />
-  //     </Layout>
-  //   </>
-  // )
-
   return (
     <AuthProvider>
       <BrowserRouter>

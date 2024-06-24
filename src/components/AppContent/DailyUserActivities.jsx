@@ -1,6 +1,4 @@
-import { Table, Tag, Tooltip, Typography } from 'antd';
-import { PiMicrosoftExcelLogoFill } from "react-icons/pi";
-import * as XLSX from "xlsx";
+import { Table, Tag, Typography } from 'antd';
 import './AppContent.css';
 
 const DailyUserActivities = ({ usersData = [] }) => {
@@ -141,28 +139,9 @@ const DailyUserActivities = ({ usersData = [] }) => {
       },
     ];
   
-    // function to download data as excel file
-    function downloadAsExcel() {
-      const cloneDataSource = [ ...usersDataSource ]?.map(user => {
-        const cloneUser = { ...user };
-        delete cloneUser.key;
-  
-        return cloneUser;
-      });
-      const worksheet = XLSX.utils.json_to_sheet(cloneDataSource);
-      const workbook = XLSX.utils.book_new();
-      XLSX.utils.book_append_sheet(workbook, worksheet, 'User Activities - Today');
-      XLSX.writeFile(workbook, "Daily User Activities.xlsx");
-    }
-  
     return (
       <>
           <Title level={4}>Daily user activities</Title>
-          {/* <div className='icon-wrapper'>
-            <Tooltip placement="bottomRight" title={'Download as excel'}>
-              <PiMicrosoftExcelLogoFill size={'2rem'} onClick={downloadAsExcel} />
-            </Tooltip>
-          </div> */}
           <Table dataSource={usersDataSource} columns={dailyActivitiesTableCols} scroll={{
             x: 1300,
           }} bordered />
