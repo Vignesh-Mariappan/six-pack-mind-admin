@@ -7,7 +7,8 @@
 body {
   width: 100vw;
   height: 100vh;
-  background-color: white;
+  background-color: rgb(0, 0, 0);
+  
 }
 
 .login-page {
@@ -17,19 +18,18 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: whitesmoke;
+  /* background: whitesmoke; */
 }
 
 .login-page-wrapper {
   width: 500px;
   padding: 2rem;
-  border: 2px solid #18181820;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: white;
+  /* background: white; */
 }
 
 .login-page-wrapper .ant-btn-icon {
@@ -43,10 +43,4 @@ body {
 
 .ant-form-item-label {
   text-align: start !important;
-}
-
-@media screen and (max-width: 500px) {
-  .login-page-wrapper {
-    border: none;
-  }
 }

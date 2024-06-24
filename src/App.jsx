@@ -4,6 +4,7 @@ import { getAuth, onAuthStateChanged } from 'firebase/auth';
 import { createContext, useContext, useEffect, useState } from 'react';
 import HomePage from './pages/HomePage';
 import MemoizedLoginPage from './pages/LoginPage';
+import { ConfigProvider, theme } from 'antd';
 
 const AuthContext = createContext();
 
@@ -35,6 +36,12 @@ export const useAuth = () => {
 function App() {
 
   return (
+    <ConfigProvider
+      theme={{
+        // 1. Use dark algorithm
+        algorithm: theme.darkAlgorithm,
+      }}
+    >
     <AuthProvider>
       <BrowserRouter>
         <Routes>
@@ -43,6 +50,8 @@ function App() {
         </Routes>
       </BrowserRouter>
     </AuthProvider>
+  </ConfigProvider>
+    
   )
 }
 
