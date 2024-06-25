@@ -40,23 +40,16 @@ const WeeklyUserActivities = ({ usersData = []}) => {
         const activityCBLast7 = activityCB?.slice(activityCB.length - 7);
         const activityTTLast7 = activityTT?.slice(activityTT.length - 7);
     
-        const dateWithBreath = activityDWBr[activityDWBr.length - 1] === day1;
-        const dateWithBody = activityDWB[activityDWB.length - 1] === day1;
-        const dateWithFood = activityDWF[activityDWF.length - 1] === day1;
-        const hourlyBreaths = activityHBr[activityHBr.length - 1] === day1 || false;
-        const countBlessings = activityCB[activityCB.length - 1] === day1;
-        const toughThings = activityTT[activityTT.length - 1] === day1; 
-    
         const currentUser = {
           key: user?.displayName,
           name: user?.displayName,
           [day1]: {
-            dateWithBreath: dateWithBreath ? 'Marked' : 'Not Marked',
-            dateWithBody: dateWithBody ? 'Marked' : 'Not Marked',
-            dateWithFood: dateWithFood ? 'Marked' : 'Not Marked',
-            hourlyBreaths: hourlyBreaths ? 'Marked' : 'Not Marked',
-            countBlessings: countBlessings ? 'Marked' : 'Not Marked',
-            toughThings: toughThings? 'Marked' : 'Not Marked',
+            dateWithBreath: activityDWBrLast7?.includes(day1) ? 'Marked' : 'Not Marked',
+            dateWithBody: activityDWBLast7?.includes(day1) ? 'Marked' : 'Not Marked',
+            dateWithFood: activityDWF?.includes(day1) ? 'Marked' : 'Not Marked',
+            hourlyBreaths: activityHBrLast7?.includes(day1) ? 'Marked' : 'Not Marked',
+            countBlessings: activityCBLast7?.includes(day1) ? 'Marked' : 'Not Marked',
+            toughThings: activityTTLast7?.includes(day1) ? 'Marked' : 'Not Marked',
           },
           [day2]: {
             dateWithBreath: activityDWBrLast7?.includes(day2) ? 'Marked' : 'Not Marked',

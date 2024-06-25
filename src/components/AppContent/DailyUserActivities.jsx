@@ -13,13 +13,20 @@ const DailyUserActivities = ({ usersData = [] }) => {
       const activityHBr = user?.activities[3]['Hourly breaths'];
       const activityCB = user?.activities[4]['Count blessings'];
       const activityTT = user?.activities[5]['Tough things'];
+
+      const activityDWBrLast7 = activityDWBr?.slice(activityDWBr.length - 7);
+      const activityDWBLast7 = activityDWB?.slice(activityDWB.length - 7);
+      const activityDWFLast7 = activityDWF?.slice(activityDWF.length - 7);
+      const activityHBrLast7 = activityHBr?.slice(activityHBr.length - 7);
+      const activityCBLast7 = activityCB?.slice(activityCB.length - 7);
+      const activityTTLast7 = activityTT?.slice(activityTT.length - 7);
   
-      const dateWithBreath = activityDWBr[activityDWBr.length - 1] === new Date().toDateString();
-      const dateWithBody = activityDWB[activityDWB.length - 1] === new Date().toDateString();
-      const dateWithFood = activityDWF[activityDWF.length - 1] === new Date().toDateString();
-      const hourlyBreaths = activityHBr[activityHBr.length - 1] === new Date().toDateString() || false;
-      const countBlessings = activityCB[activityCB.length - 1] === new Date().toDateString();
-      const toughThings = activityTT[activityTT.length - 1] === new Date().toDateString(); 
+      const dateWithBreath = activityDWBrLast7?.includes(new Date().toDateString());
+      const dateWithBody = activityDWBLast7?.includes(new Date().toDateString());
+      const dateWithFood = activityDWFLast7?.includes(new Date().toDateString());
+      const hourlyBreaths = activityHBrLast7?.includes(new Date().toDateString()) || false;
+      const countBlessings = activityCBLast7?.includes(new Date().toDateString());
+      const toughThings = activityTTLast7?.includes(new Date().toDateString()); 
   
       const totalCount = [ dateWithBreath, dateWithBody, dateWithFood, hourlyBreaths, countBlessings, toughThings ]?.filter(
         activity => activity === true
