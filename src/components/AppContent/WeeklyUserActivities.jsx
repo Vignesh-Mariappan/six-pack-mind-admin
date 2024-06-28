@@ -33,71 +33,71 @@ const WeeklyUserActivities = ({ usersData = []}) => {
         const activityCB = user?.activities[4]['Count blessings'];
         const activityTT = user?.activities[5]['Tough things'];
 
-        const activityDWBrLast7 = activityDWBr?.slice(activityDWBr.length - 7);
-        const activityDWBLast7 = activityDWB?.slice(activityDWB.length - 7);
-        const activityDWFLast7 = activityDWF?.slice(activityDWF.length - 7);
-        const activityHBrLast7 = activityHBr?.slice(activityHBr.length - 7);
-        const activityCBLast7 = activityCB?.slice(activityCB.length - 7);
-        const activityTTLast7 = activityTT?.slice(activityTT.length - 7);
+        // const activityDWBrLast7 = activityDWBr?.slice(activityDWBr.length - 7);
+        // const activityDWBLast7 = activityDWB?.slice(activityDWB.length - 7);
+        // const activityDWFLast7 = activityDWF?.slice(activityDWF.length - 7);
+        // const activityHBrLast7 = activityHBr?.slice(activityHBr.length - 7);
+        // const activityCBLast7 = activityCB?.slice(activityCB.length - 7);
+        // const activityTTLast7 = activityTT?.slice(activityTT.length - 7);
     
         const currentUser = {
           key: user?.displayName,
           name: user?.displayName,
           [day1]: {
-            dateWithBreath: activityDWBrLast7?.includes(day1) ? 'Marked' : 'Not Marked',
-            dateWithBody: activityDWBLast7?.includes(day1) ? 'Marked' : 'Not Marked',
+            dateWithBreath: activityDWBr?.includes(day1) ? 'Marked' : 'Not Marked',
+            dateWithBody: activityDWB?.includes(day1) ? 'Marked' : 'Not Marked',
             dateWithFood: activityDWF?.includes(day1) ? 'Marked' : 'Not Marked',
-            hourlyBreaths: activityHBrLast7?.includes(day1) ? 'Marked' : 'Not Marked',
-            countBlessings: activityCBLast7?.includes(day1) ? 'Marked' : 'Not Marked',
-            toughThings: activityTTLast7?.includes(day1) ? 'Marked' : 'Not Marked',
+            hourlyBreaths: activityHBr?.includes(day1) ? 'Marked' : 'Not Marked',
+            countBlessings: activityCB?.includes(day1) ? 'Marked' : 'Not Marked',
+            toughThings: activityTT?.includes(day1) ? 'Marked' : 'Not Marked',
           },
           [day2]: {
-            dateWithBreath: activityDWBrLast7?.includes(day2) ? 'Marked' : 'Not Marked',
-            dateWithBody: activityDWBLast7?.includes(day2) ? 'Marked' : 'Not Marked',
-            dateWithFood: activityDWFLast7?.includes(day2) ? 'Marked' : 'Not Marked',
-            hourlyBreaths: activityHBrLast7?.includes(day2) ? 'Marked' : 'Not Marked',
-            countBlessings: activityCBLast7?.includes(day2) ? 'Marked' : 'Not Marked',
-            toughThings: activityTTLast7?.includes(day2) ? 'Marked' : 'Not Marked',
+            dateWithBreath: activityDWBr?.includes(day2) ? 'Marked' : 'Not Marked',
+            dateWithBody: activityDWB?.includes(day2) ? 'Marked' : 'Not Marked',
+            dateWithFood: activityDWF?.includes(day2) ? 'Marked' : 'Not Marked',
+            hourlyBreaths: activityHBr?.includes(day2) ? 'Marked' : 'Not Marked',
+            countBlessings: activityCB?.includes(day2) ? 'Marked' : 'Not Marked',
+            toughThings: activityTT?.includes(day2) ? 'Marked' : 'Not Marked',
           },
           [day3]: {
-            dateWithBreath: activityDWBrLast7?.includes(day3) ? 'Marked' : 'Not Marked',
-            dateWithBody: activityDWBLast7?.includes(day3) ? 'Marked' : 'Not Marked',
-            dateWithFood: activityDWFLast7?.includes(day3) ? 'Marked' : 'Not Marked',
-            hourlyBreaths: activityHBrLast7?.includes(day3) ? 'Marked' : 'Not Marked',
-            countBlessings: activityCBLast7?.includes(day3) ? 'Marked' : 'Not Marked',
-            toughThings: activityTTLast7?.includes(day3) ? 'Marked' : 'Not Marked',
+            dateWithBreath: activityDWBr?.includes(day3) ? 'Marked' : 'Not Marked',
+            dateWithBody: activityDWB?.includes(day3) ? 'Marked' : 'Not Marked',
+            dateWithFood: activityDWF?.includes(day3) ? 'Marked' : 'Not Marked',
+            hourlyBreaths: activityHBr?.includes(day3) ? 'Marked' : 'Not Marked',
+            countBlessings: activityCB?.includes(day3) ? 'Marked' : 'Not Marked',
+            toughThings: activityTT?.includes(day3) ? 'Marked' : 'Not Marked',
           },
           [day4]: {
-            dateWithBreath: activityDWBrLast7?.includes(day4) ? 'Marked' : 'Not Marked',
-            dateWithBody: activityDWBLast7?.includes(day4) ? 'Marked' : 'Not Marked',
-            dateWithFood: activityDWFLast7?.includes(day4) ? 'Marked' : 'Not Marked',
-            hourlyBreaths: activityHBrLast7?.includes(day4) ? 'Marked' : 'Not Marked',
-            countBlessings: activityCBLast7?.includes(day4) ? 'Marked' : 'Not Marked',
-            toughThings: activityTTLast7?.includes(day4) ? 'Marked' : 'Not Marked',
+            dateWithBreath: activityDWBr?.includes(day4) ? 'Marked' : 'Not Marked',
+            dateWithBody: activityDWB?.includes(day4) ? 'Marked' : 'Not Marked',
+            dateWithFood: activityDWF?.includes(day4) ? 'Marked' : 'Not Marked',
+            hourlyBreaths: activityHBr?.includes(day4) ? 'Marked' : 'Not Marked',
+            countBlessings: activityCB?.includes(day4) ? 'Marked' : 'Not Marked',
+            toughThings: activityTT?.includes(day4) ? 'Marked' : 'Not Marked',
           },
           [day5]: {
-            dateWithBreath: activityDWBrLast7?.includes(day5) ? 'Marked' : 'Not Marked',
-            dateWithBody: activityDWBLast7?.includes(day5) ? 'Marked' : 'Not Marked',
-            dateWithFood: activityDWFLast7?.includes(day5) ? 'Marked' : 'Not Marked',
-            hourlyBreaths: activityHBrLast7?.includes(day5) ? 'Marked' : 'Not Marked',
-            countBlessings: activityCBLast7?.includes(day5) ? 'Marked' : 'Not Marked',
-            toughThings: activityTTLast7?.includes(day5) ? 'Marked' : 'Not Marked',
+            dateWithBreath: activityDWBr?.includes(day5) ? 'Marked' : 'Not Marked',
+            dateWithBody: activityDWB?.includes(day5) ? 'Marked' : 'Not Marked',
+            dateWithFood: activityDWF?.includes(day5) ? 'Marked' : 'Not Marked',
+            hourlyBreaths: activityHBr?.includes(day5) ? 'Marked' : 'Not Marked',
+            countBlessings: activityCB?.includes(day5) ? 'Marked' : 'Not Marked',
+            toughThings: activityTT?.includes(day5) ? 'Marked' : 'Not Marked',
           },
           [day6]: {
-            dateWithBreath: activityDWBrLast7?.includes(day6) ? 'Marked' : 'Not Marked',
-            dateWithBody: activityDWBLast7?.includes(day6) ? 'Marked' : 'Not Marked',
-            dateWithFood: activityDWFLast7?.includes(day6) ? 'Marked' : 'Not Marked',
-            hourlyBreaths: activityHBrLast7?.includes(day6) ? 'Marked' : 'Not Marked',
-            countBlessings: activityCBLast7?.includes(day6) ? 'Marked' : 'Not Marked',
-            toughThings: activityTTLast7?.includes(day6) ? 'Marked' : 'Not Marked',
+            dateWithBreath: activityDWBr?.includes(day6) ? 'Marked' : 'Not Marked',
+            dateWithBody: activityDWB?.includes(day6) ? 'Marked' : 'Not Marked',
+            dateWithFood: activityDWF?.includes(day6) ? 'Marked' : 'Not Marked',
+            hourlyBreaths: activityHBr?.includes(day6) ? 'Marked' : 'Not Marked',
+            countBlessings: activityCB?.includes(day6) ? 'Marked' : 'Not Marked',
+            toughThings: activityTT?.includes(day6) ? 'Marked' : 'Not Marked',
           },
           [day7]: {
-            dateWithBreath: activityDWBrLast7?.includes(day7) ? 'Marked' : 'Not Marked',
-            dateWithBody: activityDWBLast7?.includes(day7) ? 'Marked' : 'Not Marked',
-            dateWithFood: activityDWFLast7?.includes(day7) ? 'Marked' : 'Not Marked',
-            hourlyBreaths: activityHBrLast7?.includes(day7) ? 'Marked' : 'Not Marked',
-            countBlessings: activityCBLast7?.includes(day7) ? 'Marked' : 'Not Marked',
-            toughThings: activityTTLast7?.includes(day7) ? 'Marked' : 'Not Marked',
+            dateWithBreath: activityDWBr?.includes(day7) ? 'Marked' : 'Not Marked',
+            dateWithBody: activityDWB?.includes(day7) ? 'Marked' : 'Not Marked',
+            dateWithFood: activityDWF?.includes(day7) ? 'Marked' : 'Not Marked',
+            hourlyBreaths: activityHBr?.includes(day7) ? 'Marked' : 'Not Marked',
+            countBlessings: activityCB?.includes(day7) ? 'Marked' : 'Not Marked',
+            toughThings: activityTT?.includes(day7) ? 'Marked' : 'Not Marked',
           }
         }
     
