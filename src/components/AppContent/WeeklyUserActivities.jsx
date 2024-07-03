@@ -41,7 +41,7 @@ const WeeklyUserActivities = ({ usersData = []}) => {
         // const activityTTLast7 = activityTT?.slice(activityTT.length - 7);
     
         const currentUser = {
-          key: user?.displayName,
+          key: user?.email,
           name: user?.displayName,
           [day1]: {
             dateWithBreath: activityDWBr?.includes(day1) ? 'Marked' : 'Not Marked',
@@ -111,7 +111,9 @@ const WeeklyUserActivities = ({ usersData = []}) => {
         dataIndex: 'name',
         key: 'name',
         fixed: 'left',
-        width: '250px'
+        width: '250px',
+        onFilter: (value, record) => record.name === value,
+        filterSearch: true,
     },
     {
         title: day7,
@@ -284,6 +286,16 @@ const WeeklyUserActivities = ({ usersData = []}) => {
     
     ];
 
+    weeklyUserActivitiesTableCols[0] = {
+        ...weeklyUserActivitiesTableCols[0],
+        filters: usersDataSource?.map(user => {
+            return {
+                text: user.name,
+                value: user.name,
+            }
+        })
+    }
+
     // weekly activities count
     const userActivitiesCountData = usersDataSource?.map(user => {
         let dateWithBreathCount = 0;
@@ -342,7 +354,9 @@ const WeeklyUserActivities = ({ usersData = []}) => {
             dataIndex: 'name',
             key: 'name',
             fixed: 'left',
-            sorter: (a, b) => a.name.localeCompare(b.name)
+            sorter: (a, b) => a.name.localeCompare(b.name),
+            onFilter: (value, record) => record.name === value,
+            filterSearch: true,
         },
         {
             title: 'Date with breaths',
@@ -384,6 +398,8 @@ const WeeklyUserActivities = ({ usersData = []}) => {
             title: 'Percentage',
             dataIndex: 'percentage',
             key: 'percentage',
+            defaultSortOrder: 'descend',
+            sorter: (a, b) => a.percentage - b.percentage,
             render: (text, record) => {
                 return (
                     <Progress type="circle" percent={record.percentage} width={40} />
@@ -391,6 +407,16 @@ const WeeklyUserActivities = ({ usersData = []}) => {
             }
         },
     ]
+
+    userActivitiesCountTableCols[0] = {
+        ...userActivitiesCountTableCols[0],
+        filters: usersDataSource?.map(user => {
+            return {
+                text: user.name,
+                value: user.name,
+            }
+        })
+    }
 
     // function to download data as excel file
     function downloadAsExcel() {

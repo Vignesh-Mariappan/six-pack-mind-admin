@@ -2,7 +2,7 @@ import { query, collection, onSnapshot } from "firebase/firestore";
 import { useEffect, useState } from "react";
 import { firestoreDB } from "../firebase/config";
 
-const useFetchCurrentUserDoc = (collectionName) => {
+const useFetchUsersCollection = (collectionName) => {
     const [ usersData, setUsersData] = useState([]);
 
     useEffect(() => {
@@ -24,4 +24,4 @@ const useFetchCurrentUserDoc = (collectionName) => {
     return usersData;
 }
 
-export default useFetchCurrentUserDoc;
+export default useFetchUsersCollection;
