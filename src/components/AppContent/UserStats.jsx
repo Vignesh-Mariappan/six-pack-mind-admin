@@ -15,7 +15,7 @@ const UserStats = ({ usersData = []}) => {
                 title="Total Users"
                 value={usersData?.length ?? 0}
                 valueStyle={{
-                    color: '#3f8600'
+                    color: '#0891b2'
                 }}
                 prefix={<UserOutlined />}
                 />

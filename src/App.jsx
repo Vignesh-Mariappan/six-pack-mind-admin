@@ -37,10 +37,9 @@ function App() {
 
   return (
     <ConfigProvider
-      theme={{
-        // 1. Use dark algorithm
-        algorithm: theme.darkAlgorithm,
-      }}
+      // theme={{
+      //   algorithm: theme.darkAlgorithm,
+      // }}
     >
     <AuthProvider>
       <BrowserRouter>

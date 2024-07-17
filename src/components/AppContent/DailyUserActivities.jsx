@@ -13,13 +13,6 @@ const DailyUserActivities = ({ usersData = [] }) => {
       const activityHBr = user?.activities[3]['Hourly breaths'];
       const activityCB = user?.activities[4]['Count blessings'];
       const activityTT = user?.activities[5]['Tough things'];
-
-      // const activityDWBrLast7 = activityDWBr?.slice(activityDWBr.length - 7);
-      // const activityDWBLast7 = activityDWB?.slice(activityDWB.length - 7);
-      // const activityDWFLast7 = activityDWF?.slice(activityDWF.length - 7);
-      // const activityHBrLast7 = activityHBr?.slice(activityHBr.length - 7);
-      // const activityCBLast7 = activityCB?.slice(activityCB.length - 7);
-      // const activityTTLast7 = activityTT?.slice(activityTT.length - 7);
   
       const dateWithBreath = activityDWBr?.includes(new Date().toDateString());
       const dateWithBody = activityDWB?.includes(new Date().toDateString());
@@ -149,7 +142,7 @@ const DailyUserActivities = ({ usersData = [] }) => {
     return (
       <>
           <Title level={4}>Daily user activities</Title>
-          <Table dataSource={usersDataSource} columns={dailyActivitiesTableCols} scroll={{
+          <Table dataSource={usersDataSource} columns={dailyActivitiesTableCols} pagination={{ defaultPageSize: 5 }} scroll={{
             x: 1300,
           }} bordered />
       </>

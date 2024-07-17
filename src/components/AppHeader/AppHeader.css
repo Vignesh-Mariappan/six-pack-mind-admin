@@ -4,7 +4,12 @@
     height: 10vh;
     max-height: 90px;
     justify-content: space-between;
-    padding: 2rem;
+    padding: 1rem;
+    background: transparent;
+}
+
+.six-pack-mind {
+    color: #0891b2 !important;
 }
 
 .six-pack-mind-admin {

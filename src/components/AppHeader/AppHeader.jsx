@@ -17,7 +17,7 @@ const AppHeader = () => {
 
   return (
     <Header className='six-pack-mind-header'>
-      <Title level={3}>Six Pack Mind</Title>
+      <Title level={3} className='six-pack-mind'>Six Pack Mind</Title>
       <div className='six-pack-mind-admin'>
         <Avatar icon={<UserOutlined />} />
         <Title level={5}>Karthik</Title>
